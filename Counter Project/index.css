@@ -63,6 +63,7 @@ body{
 }
 .box:hover{
     box-shadow: 2px 2px 10px black;
+    border-radius: 7px;
 }
 .count{
     padding-left: 20px;
