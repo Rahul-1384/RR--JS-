@@ -17,19 +17,37 @@
 
         <div class="content">
             <div>
-                <img class="image" src="RR.jpg" alt="">
+                <img class="image" src="RR1.jpg" alt="">
             </div>
             <div class="user-name">Rahul Rajput</div>
-            <div class="bio">Frontend Developer</div>
+            <div class="bio">Fullstack Developer</div>
             <div class="button-section">
-                <button class="btn">
+                <button class="btn1" onclick="onBtn1()">
                     <i class="fa-solid fa-share"></i>
                     Share My Profile
                 </button>
-                <button class="btn">Follow Me</button>
+                <button class="btn2" onclick="document.location='https://github.com/rahul1384r'">Follow Me</button>
             </div>
         </div>
-
     </div>
+    <!-- Share modal -->
+    <div class="Share-modal-main-box">
+        <div class="heading">
+            <h1>Share My Profile</h1>
+            <i class="fa-solid fa-xmark" onclick="onBtn2()"></i>
+        </div>
+
+        <div class="sub-heading-section">
+            <p class="sub-heading">Share this via</p>
+            <div class="icon-section">
+                <a href="" class="link1"><i class="fa-brands fa-facebook"></i></a>
+                <a href="" class="link2"><i class="fa-brands fa-twitter"></i></a>
+                <a href="" class="link3"><i class="fa-brands fa-instagram"></i></a>
+                <a href="" class="link4"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="" class="link5"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>

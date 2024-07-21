@@ -16,7 +16,7 @@ body{
     overflow: hidden;
     background-color: black;
     height: 100vh;
-    z-index: 1;
+    transition: 0.8s;
 
 }
 
@@ -26,15 +26,15 @@ body{
     color: white;
     margin: 160px auto;
     width: 320px;
-    background-color: rgba(78, 73, 73, 0.9);
+    background-color: rgba(78, 73, 73, 0.3);
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.7rem;
     justify-content: center;
     align-items: center;
     padding-top: 3rem;
     padding-bottom: 3rem;
-
+    position: relative;
 }
 
 img{
@@ -47,7 +47,7 @@ img{
     flex-direction: row;
     gap: 0.4rem;
 }
-.btn{
+.btn1, .btn2{
     background-color: rgba(202, 191, 191,.1);
     border: 1px solid white;
     border-radius: 4px;
@@ -58,7 +58,7 @@ img{
     width: 7.3rem;
     transition: 0.6s;
 }
-.btn:hover{
+.btn1:hover, .btn2:hover{
     background-color: white;
     color: black;
     cursor: pointer;
@@ -75,7 +75,6 @@ img{
 }
 .circle1, .circle2{
     position: absolute;
-    
 }
 .circle1{
     width: 180px;
@@ -85,7 +84,8 @@ img{
     left: 440px;
     filter: drop-shadow(0px 0px 20px red);
     background-color: rgb(176, 68, 68);
-    z-index: -1;
+    /* z-index: 0; */
+    animation: motion1 6s linear infinite;
 }
 .circle2{
     width: 230px;
@@ -93,7 +93,154 @@ img{
     border-radius: 100%;
     bottom: 40px;
     right: 420px;
-    z-index: -1;
+    /* z-index: -1; */
     filter: drop-shadow(0px 0px 40px blue);
     background-color: rgb(67, 67, 201);
+    animation: motion2 10s ease-in-out infinite;
+}
+
+@keyframes motion1{
+    0%{
+        left: 440px;
+        top: 30px;
+    }
+    50%{
+        left: 460px;
+        top: 35px;
+    }
+    100%{
+        left: 440px;
+        top: 30px;
+    }
+}
+
+@keyframes motion2{
+    0%{
+        bottom: 40px;
+        right: 420px;
+    }
+    50%{
+        bottom: 45px;
+        right: 470px;
+    }
+    100%{
+        bottom: 40px;
+        right: 420px;
+    }
+}
+
+/* Share Modal Styles */
+
+
+.Share-modal-main-box{
+    position: relative;
+    top: -490px;
+    z-index: 0;
+    border-radius: 10px;
+    border: 2px solid gray;
+    color: white;
+    transform: scale(0);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+    background-color: rgba(0,0,0,.9);
+    max-width: 530px;
+    padding: 20px;
+    transition: all 0.8s;
+}
+.heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    padding-bottom: 0.7rem;
+}
+.fa-xmark{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.sub-heading-section{
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.icon-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    font-size: 30px;
+    padding: 12px 15px 12px 15px;
+    border-radius: 100%;
+    border: 2px solid black;
+}
+
+.link1{
+    border-color: blue;
+}
+.link2{
+    border-color: aqua;
+}
+.link3{
+    border-color: rgb(242, 0, 186);
+}
+.link4{
+    border-color: rgb(5, 196, 5);
+}
+.link5{
+    border-color: aqua;
+}
+
+.fa-facebook{
+    color: blue;
+}
+.fa-twitter{
+    color: aqua;
+}
+.fa-instagram{
+    color: rgb(242, 0, 186);
+}
+.fa-whatsapp{
+    color: rgb(5, 196, 5);
+}
+.fa-telegram{
+    color: aqua;
+}
+
+.link1:hover{
+    background-color: blue;
+    .fa-facebook{
+        color: white;
+    }
+}
+.link2:hover{
+    background-color: aqua;
+    .fa-twitter{
+        color: white;
+    }
+}
+.link3:hover{
+    background-color: rgb(242, 0, 186);
+    .fa-instagram{
+        color: white;
+    }
+}
+.link4:hover{
+    background-color: rgb(5, 196, 5);
+    .fa-whatsapp{
+        color: white;
+    }
+}
+.link5:hover{
+    background-color: aqua;
+    .fa-telegram{
+        color: white;
+    }
 }
