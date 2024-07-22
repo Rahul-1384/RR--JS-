@@ -14,7 +14,7 @@ body{
 .wrapper{
     position: relative;
     overflow: hidden;
-    background-color: black;
+    background-image: linear-gradient(190deg,black 10%,purple,black 20%,black 90%,purple,black);
     height: 100vh;
     transition: 0.8s;
 
@@ -38,9 +38,11 @@ body{
     position: relative;
 }
 
+
 img{
     width: 160px;
     border-radius: 100%;
+    
 }
 
 .button-section{
@@ -131,7 +133,6 @@ img{
 }
 
 /* Share Modal Styles */
-
 
 .Share-modal-main-box{
     position: relative;
