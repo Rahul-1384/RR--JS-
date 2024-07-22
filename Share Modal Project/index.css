@@ -27,6 +27,7 @@ body{
     margin: 160px auto;
     width: 320px;
     background-color: rgba(78, 73, 73, 0.3);
+    backdrop-filter: blur(3px);
     display: flex;
     flex-direction: column;
     gap: 1.7rem;
@@ -38,7 +39,7 @@ body{
 }
 
 img{
-    width: 120px;
+    width: 160px;
     border-radius: 100%;
 }
 
@@ -144,7 +145,8 @@ img{
     flex-direction: column;
     gap: 2rem;
     margin: 0 auto;
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(57, 56, 56, 0.9);
+    backdrop-filter: blur(3px);
     max-width: 530px;
     padding: 20px;
     transition: all 0.8s;
@@ -184,18 +186,27 @@ a{
 
 .link1{
     border-color: blue;
+    transition: 0.6s;
+
 }
 .link2{
     border-color: aqua;
+    transition: 0.6s;
+
 }
 .link3{
     border-color: rgb(242, 0, 186);
+    transition: 0.6s;
+
 }
 .link4{
     border-color: rgb(5, 196, 5);
+    transition: 0.6s;
+
 }
 .link5{
     border-color: aqua;
+    transition: 0.6s;
 }
 
 .fa-facebook{
