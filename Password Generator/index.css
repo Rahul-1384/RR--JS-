@@ -95,10 +95,9 @@
 .strength-detector{
     width: 20px;
     height: 20px;
-    background-color: white;
-    filter: drop-shadow(1px 1px 1px white);
+    
+    filter: drop-shadow();
     box-shadow: -1px -1px 20px white;
-    /* filter: blur(0.1px); */
     border-radius: 100%;
 }
 .generate-password-btn{
