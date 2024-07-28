@@ -57,6 +57,7 @@ body{
 
 
 .grant-location-section{
+    opacity: 1;
     width: 50%;
     margin: 0 auto;
     color: white;
@@ -70,6 +71,8 @@ body{
     border-radius: 10px;
     gap: 1rem;
 }
+
+
 .grant-location-section button{
     padding: 0.7rem 1rem;
     font-weight: bold;
@@ -84,6 +87,16 @@ body{
     color: white;
 }
 
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-opacity{
+    display: none;
+}
 
 .your-weather{
     width: fit-content;
@@ -107,7 +120,7 @@ body{
 }
 
 .your-city-card{
-    opacity: 0;
+    opacity: 1;
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     width: 50%;
@@ -160,7 +173,6 @@ body{
     justify-content: center;
     align-items: center;
     gap: 0.4rem;
-    display: none;
 }
 .search-bar{
     width: 400px;
@@ -193,4 +205,17 @@ body{
 }
 .image-section{
     padding-top: 7px;
+}
+
+
+.grant-location-section-opacity{
+    display: none;
+}
+
+.input-section-opacity{
+    display: none;
+}
+
+.your-city-card-opacity{
+    display: none;
 }
