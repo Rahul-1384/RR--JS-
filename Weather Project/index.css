@@ -88,6 +88,17 @@ body{
 }
 
 
+.error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error-opacity{
+    display: none;
+}
+
+
+
 .loader{
     display: flex;
     justify-content: center;

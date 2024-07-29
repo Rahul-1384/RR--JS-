@@ -28,16 +28,24 @@
 
         </div>
 
-        <div class="loader" loader>
-            <img src="loading.gif" alt="" width="200">
-        </div>
-
-
+        
+        
         <div class="input-section">
             <input class="search-bar" type="serach" placeholder="Search for city..." input-search>
             <div class="image-section" input-image>
                 <img src="search.png" alt="" width="20" onclick="getWeatherLocationByCityName()">
             </div>
+        </div>
+
+
+        <div class="error" error-section>
+            <img src="err.jpeg" alt="" width="300" style="border-radius: 10px;">
+        </div>
+
+
+        <!-- loader gif -->
+        <div class="loader" loader>
+            <img src="loading.gif" alt="" width="200">
         </div>
         <!-- Your City Card -->
          <div class="your-city-card">
@@ -47,23 +55,23 @@
             </div>
             <h1 class="clouds" weather-type>Clouds</h1>
             <img class="clouds-image" src="dark clouds.png" alt="" width="90" height="70" clouds-image>
-            <h1 class="temperature">27.32 °C</h1>
+            <h1 class="temperature" temperature>27.32 °C</h1>
 
             <div class="three-box">
                 <div class="boxes">
                     <img src="speed.webp" alt="" width="100">
                     <p>WINDSPEED</p>
-                    <p>1.54m/s</p>
+                    <p wind-speed>1.54m/s</p>
                 </div>
                 <div class="boxes">
                     <img src="humidity.png" alt="" width="50">
                     <p>HUMIDITY</p>
-                    <p>38%</p>
+                    <p humidity>38%</p>
                 </div>
                 <div class="boxes">
                     <img src="cloud.png" alt="" width="50">
                     <p>CLOUDS</p>
-                    <p>40%</p>
+                    <p clouds>40%</p>
                 </div>
             </div>
          </div>

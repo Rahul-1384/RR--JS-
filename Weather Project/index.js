@@ -8,8 +8,16 @@ const searchInput = document.querySelector('[input-search]');
 const searchImage = document.querySelector('[input-image]');
 const loader = document.querySelector('[loader]');
 const city = document.querySelector('[fetch-your-city]');
-const weather = document.querySelector('[weather-type]')
-const cloudsImage = document.querySelector('[clouds-image]')
+const weather = document.querySelector('[weather-type]');
+const cloudsImage = document.querySelector('[clouds-image]');
+const showTemperature = document.querySelector('[temperature]');
+const windSpeed = document.querySelector('[wind-speed]');
+const humidity = document.querySelector('[humidity]');
+const clouds = document.querySelector('[clouds]');
+const error = document.querySelector('[error-section]');
+
+
+error.classList.add('error-opacity');
 
 
 let button = document.querySelector('[grant-button]');
@@ -26,6 +34,8 @@ function switchToYourWeather(){
     input.classList.add('input-section-opacity');
     loader.classList.add('loader-opacity');
     yourCity.classList.remove('your-city-card-opacity');
+    error.classList.add('error-opacity');
+
 }
 search.addEventListener('click', switchToSearch);
 yourWeather.addEventListener('click', switchToYourWeather);
@@ -44,27 +54,36 @@ if(searchInput.value !== ""){
     })
 }
 async function getWeatherLocationByCityName(){
-    let city_name = searchInput.value;
-    // add the class to show loader
-    loader.classList.remove('loader-opacity');
-    let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${API_KEY}`)
-    let data = await response.json();
-    // remove the class of loader
-    loader.classList.add('loader-opacity');
-    city.textContent = data?.name;
+    try{
+        yourCity.classList.add('your-city-card-opacity');
 
-    weather.textContent = data?.weather[0].main;
-    if(weather.textContent === 'Clear'){
-        cloudsImage.style.img = url('humidity.png');
+        let city_name = searchInput.value;
+        // add the class to show loader
+        loader.classList.remove('loader-opacity');
+        let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${API_KEY}`)
+        let data = await response.json();
+        // remove the class of loader
+        loader.classList.add('loader-opacity');
+        city.textContent = data?.name;
+
+        weather.textContent = data?.weather[0].main;
+        // if(weather.textContent === 'Clear'){
+        //     cloudsImage.src = url('humidity.png');
+        // }
+
+        let tempKelvin = `${data?.main?.temp.toFixed(2)}`;
+        let tempCelcius = tempKelvin - 273.15;
+        showTemperature.textContent = tempCelcius.toFixed(2) + '°C';
+        windSpeed.textContent = data?.wind?.speed + 'm/s';
+        humidity.textContent = data?.main?.humidity + '%';
+        clouds.textContent = data?.clouds?.all + '%';
+        error.classList.add('error-opacity');
+        yourCity.classList.remove('your-city-card-opacity');
     }
-    
-
-
-
-
-
-
-    yourCity.classList.remove('your-city-card-opacity');
+    catch(e){
+        error.classList.remove('error-opacity');
+        console.log('hiiiiiii');
+    }
 }
 
 
