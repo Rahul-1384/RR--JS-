@@ -16,6 +16,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 -400px;
+    /* overflow: hidden; */
 }
 
 .container{
@@ -103,10 +104,11 @@ body{
     border-radius: 10px;
 }
 .error-sent{
+    
     font-size: 22px;
-    color: orangered;
+    color: white;
     font-weight: bolder;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .error-opacity{
     display: none;

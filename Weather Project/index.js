@@ -44,7 +44,7 @@ function switchToYourWeather(){
     loader.classList.add('loader-opacity');
     yourCity.classList.remove('your-city-card-opacity');
     error.classList.add('error-opacity');
-
+    getGeoLocation();
 }
 search.addEventListener('click', switchToSearch);
 yourWeather.addEventListener('click', switchToYourWeather);
@@ -106,8 +106,30 @@ async function getWeatherLocationByCityName(){
 
 
 
+async function getWeatherLocationByCoords(lat,long){
+    yourCity.classList.add('your-city-card-opacity');
+    grant.classList.add('grant-location-section-opacity');
+    loader.classList.remove('loader-opacity');
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_KEY}`);
+    const data = await response.json();
+    loader.classList.add('loader-opacity');
+    console.log('done with ');
+    let ico =  data?.sys?.country;
+    let cod = ico.toLowerCase();
+    flag.src = `https://flagcdn.com/144x108/${cod}.png`;
+    city.textContent = data?.name;
+    console.log('done with this');
+    weather.textContent = data?.weather[0].main + ` (${data?.weather[0].description})`;
+    cloudsImage.src = `https://openweathermap.org/img/wn/${data?.weather[0].icon}@2x.png`
+    let tempKelvin = `${data?.main?.temp.toFixed(2)}`;
+    let tempCelcius = tempKelvin - 273.15;
+    showTemperature.textContent = tempCelcius.toFixed(2) + '°C';
+    windSpeed.textContent = data?.wind?.speed + 'm/s';
+    humidity.textContent = data?.main?.humidity + '%';
+    clouds.textContent = data?.clouds?.all + '%';
+    yourCity.classList.remove('your-city-card-opacity');
 
-
+}
 
 
 
@@ -123,7 +145,9 @@ function getGeoLocation(){
 
 
 function showUserPosition(position){
-    let location = position.coords.latitude + " " + position.coords.longitude;
+    const lat = position.coords.latitude;
+    const long = position.coords.longitude;
+    getWeatherLocationByCoords(lat,long);
 }
 button.addEventListener('click', getGeoLocation);
 

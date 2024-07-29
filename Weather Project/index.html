@@ -7,11 +7,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Kalnia+Glaze:wght@100..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <title>City Weather</title>
+    <title>Weather Information</title>
 </head>
 <body>
     <div class="container">
-        <div class="heading">Weather API</div>
+        <div class="heading">Weather App</div>
         
         <div class="category">
             <div class="your-weather" your-weather>Your Weather</div>
@@ -31,7 +31,7 @@
         
         
         <div class="input-section">
-            <input class="search-bar" id="search-input" type="serach" placeholder="Search for city..." input-search>
+            <input class="search-bar" id="search-input" type="serach" placeholder="Search for city..." autocomplete="off" input-search>
             <div class="image-section" input-image>
                 <img src="search.png" alt="" width="20" onclick="getWeatherLocationByCityName()">
             </div>
@@ -40,7 +40,7 @@
 
         <div class="error" error-section>
             <img src="err.jpeg" alt="" width="300" style="border-radius: 10px;">
-            <p class="error-sent" error-msg>Please provide correct input!</p>
+            <p class="error-sent" error-msg></p>
         </div>
 
 
@@ -51,30 +51,30 @@
         <!-- Your City Card -->
          <div class="your-city-card">
             <div class="city">
-                <h1 fetch-your-city>Mathura</h1>
-                <img src="india.jpg" alt="" height="20" flag-icon>
+                <h1 fetch-your-city></h1>
+                <img src="" alt="" height="20" flag-icon>
             </div>
-            <h1 class="clouds" weather-type>Clouds</h1>
+            <h1 class="clouds" weather-type>=</h1>
             <div cloud-image-div>
-                <img class="clouds-image" src="dark clouds.png" alt="" clouds-image>
+                <img class="clouds-image" src="" alt="" clouds-image>
             </div>
-            <h1 class="temperature" temperature>27.32 °C</h1>
+            <h1 class="temperature" temperature></h1>
 
             <div class="three-box">
                 <div class="boxes">
                     <img src="speed.webp" alt="" width="100">
                     <p>WINDSPEED</p>
-                    <p wind-speed>1.54m/s</p>
+                    <p wind-speed></p>
                 </div>
                 <div class="boxes">
                     <img src="humidity.png" alt="" width="50">
                     <p>HUMIDITY</p>
-                    <p humidity>38%</p>
+                    <p humidity></p>
                 </div>
                 <div class="boxes">
                     <img src="cloud.png" alt="" width="50">
                     <p>CLOUDS</p>
-                    <p clouds>40%</p>
+                    <p clouds></p>
                 </div>
             </div>
          </div>
