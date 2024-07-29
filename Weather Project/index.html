@@ -31,7 +31,7 @@
         
         
         <div class="input-section">
-            <input class="search-bar" type="serach" placeholder="Search for city..." input-search>
+            <input class="search-bar" id="search-input" type="serach" placeholder="Search for city..." input-search>
             <div class="image-section" input-image>
                 <img src="search.png" alt="" width="20" onclick="getWeatherLocationByCityName()">
             </div>
@@ -40,6 +40,7 @@
 
         <div class="error" error-section>
             <img src="err.jpeg" alt="" width="300" style="border-radius: 10px;">
+            <p class="error-sent" error-msg>Please provide correct input!</p>
         </div>
 
 
@@ -51,10 +52,12 @@
          <div class="your-city-card">
             <div class="city">
                 <h1 fetch-your-city>Mathura</h1>
-                <img src="india.jpg" alt="" height="20">
+                <img src="india.jpg" alt="" height="20" flag-icon>
             </div>
             <h1 class="clouds" weather-type>Clouds</h1>
-            <img class="clouds-image" src="dark clouds.png" alt="" width="90" height="70" clouds-image>
+            <div cloud-image-div>
+                <img class="clouds-image" src="dark clouds.png" alt="" clouds-image>
+            </div>
             <h1 class="temperature" temperature>27.32 °C</h1>
 
             <div class="three-box">

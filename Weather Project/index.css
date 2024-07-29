@@ -15,7 +15,7 @@ body{
     background-image: url('bg1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 -370px;
+    background-position: 0 -400px;
 }
 
 .container{
@@ -53,6 +53,7 @@ body{
     justify-content: space-around;
     align-items: center;
     gap: 20rem;
+    margin-top: -20px;
 }
 
 
@@ -90,8 +91,22 @@ body{
 
 .error{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+.error-sent{
+    font-size: 22px;
+    color: orangered;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 .error-opacity{
     display: none;
@@ -158,6 +173,13 @@ body{
 .clouds{
     font-weight: 100;
     font-size: 23px;
+}
+
+.clouds-image{
+    object-fit: cover;
+    /* user-select: none; */
+    /* margin-top: -40px;
+    margin-bottom: -40px; */
 }
 
 .three-box{

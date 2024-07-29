@@ -15,7 +15,7 @@ async function showWeather(){
     try{
         content.classList.add('.active');
 
-        let api = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=mat&appid=${API_KEY}`);
+        let api = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=dampier&appid=${API_KEY}`);
         let data = await api.json();
 
         content.classList.remove('.active');
