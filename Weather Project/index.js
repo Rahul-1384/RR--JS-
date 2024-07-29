@@ -17,6 +17,18 @@ const clouds = document.querySelector('[clouds]');
 const error = document.querySelector('[error-section]');
 const flag = document.querySelector('[flag-icon]');
 const errorMsg = document.querySelector('[error-msg]');
+const starter = document.querySelector('[starter]');
+const button = document.querySelector('[grant-button]');
+const container = document.querySelector('[container]');
+
+setTimeout(() => {
+    starter.classList.add('starter-opacity');
+    container.classList.remove('container-opacity');
+}, Math.random(3,5)*4000);
+starter.setAttribute('style','z-index:-1');
+container.classList.add('container-opacity');
+
+
 
 input.classList.add('input-section-opacity');
 loader.classList.add('loader-opacity');
@@ -26,7 +38,6 @@ error.classList.add('error-opacity');
 error.classList.add('error-opacity');
 
 
-let button = document.querySelector('[grant-button]');
 
 
 function switchToSearch(){

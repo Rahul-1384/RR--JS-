@@ -16,8 +16,49 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 -400px;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
+
+
+.starter{
+    position: absolute;
+    background-color: rgba(0, 0, 1, 0.456);
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    text-align: center;
+    padding-top: 300px;
+    overflow: hidden;
+    font-weight: bolder;
+}
+.starter-opacity{
+    opacity: 0;
+}
+.starter:before{
+    font-size: 60px;
+    content: "";
+    color: white;
+    animation: loadin 2s linear infinite;
+}
+@keyframes loadin{
+    0%{content: "L";}
+    10%{content: "LO";}
+    20%{content: "LOA";}
+    30%{content: "LOAD";}
+    40%{content: "LOADI";}
+    50%{content: "LOADIN";}
+    60%{content: "LOADING";}
+    70%{content: "LOADING.";}
+    80%{content: "LOADING..";}
+    90%{content: "LOADING...";}
+    100%{content: "LOADING....";}
+}
+
+
+
+
+
 
 .container{
     width: 1200px;
@@ -25,6 +66,9 @@ body{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+.container-opacity{
+    opacity: 0;
 }
 
 .heading{
