@@ -1,6 +1,5 @@
-*,
-*::after,
-*::before{
+*
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,8 +14,7 @@ body{
     background-image: url('bg1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 -400px;
-    overflow: hidden;
+    background-position: 0 -470px;
 }
 
 
@@ -29,7 +27,6 @@ body{
     z-index: 1;
     text-align: center;
     padding-top: 300px;
-    overflow: hidden;
     font-weight: bolder;
 }
 .starter-opacity{
@@ -74,18 +71,17 @@ body{
 .heading{
     font-weight: 700;
     font-style: normal;
-    font-size: 60px;
+    font-size: 50px;
     color: rgb(128, 7, 227);
     height: fit-content;
     width: fit-content;
     text-align: center;
-    margin: 20px auto;
-    padding: 0.3rem 1rem;
-    backdrop-filter: blur(2px);
+    margin: 0 auto;
+    /* padding: 0.3rem 1rem; */
+    backdrop-filter: blur(10px);
     background: transparent;
     vertical-align: middle;
-    border-radius: 20px;
-    background-image: linear-gradient(to top, black 20%,rgb(0, 200, 255) 80%);
+    background-image: linear-gradient(to top, black 20%,rgb(84, 89, 185) 80%);
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
     background-clip: text;
@@ -98,7 +94,6 @@ body{
     justify-content: space-around;
     align-items: center;
     gap: 20rem;
-    margin-top: -20px;
 }
 
 
@@ -181,6 +176,7 @@ body{
     color: white;
     border-radius: 3px;
     transition: all 0.2s;
+    margin-top: -20px;
 }
 .your-weather:hover{
     transform: scale(1.1);
@@ -252,6 +248,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 0.4rem;
+    margin-top: -10px;
 }
 .search-bar{
     width: 400px;
