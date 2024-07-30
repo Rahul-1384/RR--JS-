@@ -75,7 +75,6 @@ body{
     font-weight: 700;
     font-style: normal;
     font-size: 50px;
-    color: rgb(128, 7, 227);
     height: fit-content;
     width: fit-content;
     text-align: center;
@@ -83,7 +82,7 @@ body{
     backdrop-filter: blur(10px);
     background: transparent;
     vertical-align: middle;
-    background-image: linear-gradient(to top, black 20%,rgb(84, 89, 185) 80%);
+    background-image: linear-gradient(to top, rgb(74, 20, 141) 20%,rgb(28, 30, 67) 80%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     user-select: none;

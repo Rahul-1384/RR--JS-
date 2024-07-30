@@ -28,7 +28,8 @@ setTimeout(() => {
 starter.setAttribute('style','z-index:-1');
 container.classList.add('container-opacity');
 setTimeout(() => {
-    alert(`It is Adviced to zoom out the screen on Smaller Devices.
+    alert(`Note:- It is Adviced to zoom out the screen on Smaller Devices
+and Reload the Screen again to Get Exact Information.
 Have A Good Weather 😊`);
 }, 4000);
 
