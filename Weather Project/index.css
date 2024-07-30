@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body{
@@ -14,7 +15,9 @@ body{
     background-image: url('bg1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 120vh;
     background-position: 0 -470px;
+    overflow: hidden;
 }
 
 
@@ -77,15 +80,13 @@ body{
     width: fit-content;
     text-align: center;
     margin: 0 auto;
-    /* padding: 0.3rem 1rem; */
     backdrop-filter: blur(10px);
     background: transparent;
     vertical-align: middle;
     background-image: linear-gradient(to top, black 20%,rgb(84, 89, 185) 80%);
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    user-select: none;
 }
 
 .category{
@@ -94,6 +95,7 @@ body{
     justify-content: space-around;
     align-items: center;
     gap: 20rem;
+    user-select: none;
 }
 
 
@@ -165,6 +167,9 @@ body{
     display: none;
 }
 
+input::placeholder{
+    user-select: none;
+}
 .your-weather{
     width: fit-content;
     background-color: rgba(255, 255, 255, 0.3);
@@ -294,4 +299,55 @@ body{
 
 .your-city-card-opacity{
     display: none;
+}
+
+
+@media (max-width:768px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .body{
+        
+    
+        
+    }
+    .heading{
+        font-size: 80px;
+    }
+    .your-weather{
+        transform: scale(2);
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        background-image: url('bg1.jpg');
+        background-size: 1000px;
+        background-repeat: no-repeat;
+        background-color: red;
+        height: 100vh;
+        gap: 7rem;
+    }
+    .grant-location-section{
+        transform: scale(2);
+
+    }
+    .your-city-card{
+        width: 80%;
+    }
+    .search-bar{
+        transform: scale(1.5);
+        margin-left: 5rem;
+    }
+    .image-section{
+        margin-left: 110px;
+        transform: scale(1.4);
+    }
+    .your-city-card{
+        transform: scale(1.2);
+    }
 }

@@ -27,7 +27,10 @@ setTimeout(() => {
 }, Math.random(3,5)*4000);
 starter.setAttribute('style','z-index:-1');
 container.classList.add('container-opacity');
-
+setTimeout(() => {
+    alert(`It is Adviced to zoom out the screen on smaller devices
+Have A Good Weather 😊`);
+}, 4000);
 
 
 input.classList.add('input-section-opacity');
