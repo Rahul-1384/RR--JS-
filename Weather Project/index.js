@@ -1,4 +1,4 @@
-const API_KEY = 'eee37ce1dcfcaac90103d48e243a9e44';
+const API_KEY = 'f5494dd8ea66dd629c985ae34fb471b0';
 const grant = document.querySelector('.grant-location-section');
 const input = document.querySelector('.input-section');
 const yourCity = document.querySelector('.your-city-card');
