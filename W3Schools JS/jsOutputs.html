@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h3>This is innerHTML</h3>
+        <p id="demo1">This is blah blah</p>
+        <h1>.innerHTML</h1>
+        <button id="demo" onclick="document.getElementById('demo1').innerHTML=5">try new</button>
+        <h1>document.write('Changed')</h1>
+        <button id="demo" onclick="document.write('changed')">try new</button>
+        <h1>alert('this is warning')</h1>
+        <button id="demo" onclick="alert('this is warning')">try new</button>
+        <h1>window.print()</h1>
+        <button id="demo" onclick="window.print()">try new</button>
+
+
+
+        <script>
+            // 1) .innerHTML
+            document.getElementById("demo").innerHTML="Changed";
+            // 2) document.write('Changed')
+            document.write("Changed");
+            // 3) alert('this is warning')
+            alert("this is warning")
+            // 4) window.print()
+            window.print()
+
+        </script>
+    </body>
+</html>
