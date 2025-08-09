@@ -29,3 +29,22 @@ newPara.style.cssText = ("color:yellow; background-color: red")
 newPara.setAttribute("id", "Rahul")
 newPara.classList.add("rahul")
 console.log(newPara.className)
+
+
+
+const parent = document.querySelector("#parent")
+const child = document.querySelector("#child")
+
+// Bubbling phase event
+parent.addEventListener('click', () => {
+    console.log("Parent Event");
+});
+
+child.addEventListener('click', (e) => {
+    console.log("Child Event");
+    e.stopImmediatePropagation()
+    e.stopPropagation();
+});
+child.addEventListener('click', (e) => {
+    console.log("Child Event another listener");
+});
