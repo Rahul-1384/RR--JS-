@@ -48,3 +48,33 @@ child.addEventListener('click', (e) => {
 child.addEventListener('click', (e) => {
     console.log("Child Event another listener");
 });
+
+
+// Promises: object that represents the eventual completion or failure of asynchronous code & it's 
+// resulting value;
+let promise1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        // resolve(123456);
+        reject(new Error("Hello I am error"))
+    }, 2000);
+})
+
+promise1
+.then(value => console.log(value))
+.catch(error => console.error(error))
+
+
+// Async/Await
+async function fun(){
+    const response = await fetch('url', {
+        method: 'POST',
+        body: JSON.stringify({
+            id: 1,
+            title: "Foo",
+            name: "Rahul",
+        }),
+        headers:{
+            'Content-Type': 'application/json'
+        }
+    })
+}
